@@ -1,0 +1,172 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('logo.jpeg'); /* Make sure this path is correct */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.chat-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+#chat-box {
+max-height: 300px;
+overflow-y: auto;
+padding-right: 20px;
+color: #fff;
+}
+
+.message-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#user-input {
+width: calc(100% - 220px); /* Adjusted to fit both buttons */
+padding: 10px;
+border: 1px solid #666;
+border-radius: 8px;
+font-size: 16px;
+background-color: #444;
+color: #fff;
+}
+
+#user-input:focus {
+outline: none;
+border-color: #3897f0;
+}
+
+#send-button {
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+background-color: #ff007f;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+#send-button:hover {
+background-color: #ff0066;
+}
+
+.primary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6A2352; /* Changed color */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px; /* Space between buttons */
+    /* Ensure it matches the size of the send button */
+}
+
+.primary:hover {
+    background-color: #4f1a39; /* Darker shade of #6A2352 */
+}
+
+#audio-visualizer {
+width: 100%;
+height: 6px;
+background-color: #ff007f;
+position: relative;
+margin-top: 20px;
+border-radius: 5px;
+}
+
+/* Popup message styles */
+.popup-hidden {
+    display: none;
+}
+
+#popup-message {
+position: fixed;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+background-color: rgba(0, 0, 0, 0.9);
+color: #ffff;
+text-align: center;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+border-radius: 8px;
+z-index: 1000;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Dialog Styles */
+dialog {
+    padding: 1rem 3rem;
+    background: white;
+    max-width: 400px;
+    padding-top: 2rem;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    animation: fadeIn 1s ease both;
+}
+
+dialog::backdrop {
+    animation: fadeIn 1s ease both;
+    background: rgb(0 0 0 / 50%);
+    z-index: 2;
+    backdrop-filter: blur(20px);
+}
+
+.x {
+    filter: grayscale(1);
+    border: none;
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    transition: ease filter, transform 0.3s;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.x:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 0.5rem 0;
+}
+
+a:visited {
+    color: rgb(106, 35, 82); /* Color matched to #6A2352 */
+}
+
+/* General Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

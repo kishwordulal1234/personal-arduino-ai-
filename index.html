@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VS Niketan Chat Bot</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="popup-message" class="popup-hidden">
+<p id="popup-text"></p>
+</div>
+
+<div class="chat-container">
+<div id="chat-box"></div>
+<div class="message-box">
+<input type="text" id="user-input" placeholder="Type your message...">
+<button id="send-button">Send</button>
+<!-- Button to open the dialog -->
+<button class="primary" onclick="document.getElementById('dialog').showModal();">Upcoming Events</button>
+</div>
+<canvas id="audio-visualizer"></canvas> <!-- Canvas for audio visualizer -->
+</div>
+
+<!-- Dialog modal -->
+<dialog id="dialog">
+<h2>Upcoming Events</h2>
+<p>Exciting news! An 8-ball pool event is coming up at our college. For more details, please visit our <a href="https://www.instagram.com/un1kn0n3_h4rt/?igsh=dzh0dHAyYWNteHQ1" target="_blank">Instagram page</a>. We hope you find the information helpful!</p>
+<p>If you have any questions or need further information, feel free to contact our event department.</p>
+<button onclick="document.getElementById('dialog').close();" aria-label="Close" class="x">❌</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
